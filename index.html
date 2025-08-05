@@ -1,0 +1,139 @@
+<!-- for vercel deployment just an UI for POPUP-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI summariser</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <style>
+        body {
+            font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue';
+            min-width: 600px;
+            min-height: 350px;
+            padding: 15px;
+        }
+
+        .modes {
+            position: fixed;
+            bottom:5px;
+            right:0px ;
+            padding:10px 10px 10px 10px ;
+        }
+
+        .modes button{
+            background-color: #515164;
+            border-radius: 190rem;
+        }
+        h2{
+             margin-bottom: 20px;
+        }
+        .options{
+            display:flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .options button{
+            padding: 14px;
+            border-radius: 6px;
+            color: white ;
+            border : none ;
+            background-color: #4285f4;
+            cursor:pointer;
+            font-weight: bold;
+            font-size: larger;
+        }
+        .options button:hover{
+            background-color:  #3367d6;
+        }
+
+        #copy-btn {
+        background-color: #34a853;
+       }
+
+      #copy-btn:hover {
+        background-color: #2e8b57;
+      }
+
+        #summary-type {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+      }
+
+      #result{
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 10px;
+        border: 1px solid rgb(212, 209, 209);
+        min-height: 150px;
+        max-height: 400px;
+         overflow-y: auto;
+        white-space: pre-wrap;
+        line-height: 1.5;
+
+      }
+
+       .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+      }
+
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+
+    </style>
+</head>
+
+<body>
+    <h2>Essentia</h2>
+    <p>Capture what matters. Powered by AI.</p>
+    <div class="options">
+        <select id="summary-type">
+            <option value="brief">Brief</option>
+            <option value="detailed">Detailed</option>
+            <option value="bullets">Bullet Points</option>
+        </select>
+
+        <button id="summarize">Summarize</button>
+        <button id="copy-btn">Copy</button>
+    </div>
+
+    <div id="result">
+        Select A summary Type And click 'Summarize' on this page to generate a summmary.
+    </div>
+
+    <div class="modes" >
+        <button value="mode" id = "modeicon" style= "font-size : 22px ; border:none" ><span class="material-symbols-outlined">dark_mode</span> 
+        </button>
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
