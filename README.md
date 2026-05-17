@@ -59,7 +59,7 @@ EssentiaAI is a powerful, AI-driven Chrome extension that **summarizes long arti
 
 ## 🤝 Credits
 
-- Built with 💻 by [Anjali Bansal](https://github.com/AnjaliBansal2804)
+- Built with 💻 by [Aditya Singh Bhati](https://github.com/adityasinghbhati2004)
 - Powered by [Google Gemini API](https://ai.google.dev)
 
 ---
